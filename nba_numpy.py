@@ -96,3 +96,15 @@ games = data[:, GAMES_INDEX]
 blocks_per_game = np.where(games > 0, blocks / games, 0)
 
 print("Average blocks per game:", np.mean(blocks_per_game))
+
+
+# Steals Per Game
+
+
+STEALS_INDEX = 25
+
+steals = data[:, STEALS_INDEX]
+
+steals_per_game = np.where(games > 0, steals / games, 0)
+
+print("Average steals per game:", np.mean(steals_per_game))
