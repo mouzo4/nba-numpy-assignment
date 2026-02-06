@@ -46,3 +46,15 @@ points_per_minute = np.where(minutes > 0, points / minutes, 0)
 
 print("Average points per minute:", np.mean(points_per_minute))
 
+
+# Three Point Accuracy
+
+THREE_MADE_INDEX = 10
+THREE_ATTEMPT_INDEX = 11
+
+three_made = data[:, THREE_MADE_INDEX]
+three_attempts = data[:, THREE_ATTEMPT_INDEX]
+
+three_accuracy = np.where(three_attempts > 0, three_made / three_attempts, 0)
+
+print("Average three point accuracy:", np.mean(three_accuracy))
