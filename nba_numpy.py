@@ -108,3 +108,14 @@ steals = data[:, STEALS_INDEX]
 steals_per_game = np.where(games > 0, steals / games, 0)
 
 print("Average steals per game:", np.mean(steals_per_game))
+
+
+# Top 100 Players by Field Goal Accuracy
+
+
+top_fg_indices = np.argsort(fg_accuracy)[-100:]
+
+top_fg_accuracy = fg_accuracy[top_fg_indices]
+
+print("Top 100 field goal accuracy values:")
+print(top_fg_accuracy)
