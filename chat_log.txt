@@ -1,0 +1,3 @@
+I used ChatGPT to help me understand the NumPy assignment,
+plan the calculations, debug Python code,
+and explain how to structure the project and README file.
