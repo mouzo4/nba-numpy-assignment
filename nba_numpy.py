@@ -58,3 +58,17 @@ three_attempts = data[:, THREE_ATTEMPT_INDEX]
 three_accuracy = np.where(three_attempts > 0, three_made / three_attempts, 0)
 
 print("Average three point accuracy:", np.mean(three_accuracy))
+
+
+# Free Throw Accuracy
+
+
+FT_MADE_INDEX = 12
+FT_ATTEMPT_INDEX = 13
+
+ft_made = data[:, FT_MADE_INDEX]
+ft_attempts = data[:, FT_ATTEMPT_INDEX]
+
+ft_accuracy = np.where(ft_attempts > 0, ft_made / ft_attempts, 0)
+
+print("Average free throw accuracy:", np.mean(ft_accuracy))
