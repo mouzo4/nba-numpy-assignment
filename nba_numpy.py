@@ -82,3 +82,17 @@ overall_attempts = fg_attempts + three_attempts
 overall_accuracy = np.where(overall_attempts > 0, overall_made / overall_attempts, 0)
 
 print("Average overall shooting accuracy:", np.mean(overall_accuracy))
+
+
+# Blocks Per Game
+
+
+BLOCKS_INDEX = 24
+GAMES_INDEX = 5
+
+blocks = data[:, BLOCKS_INDEX]
+games = data[:, GAMES_INDEX]
+
+blocks_per_game = np.where(games > 0, blocks / games, 0)
+
+print("Average blocks per game:", np.mean(blocks_per_game))
