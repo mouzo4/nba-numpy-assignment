@@ -1,5 +1,4 @@
 # NBA NumPy Assignment
-# This file analyzes NBA player statistics using NumPy
 
 import numpy as np
 
@@ -29,6 +28,21 @@ minutes = data[:, MIN_INDEX]
 points = data[:, POINTS_INDEX]
 
 # Avoid division by zero
+
+
+# Field Goal Accuracy
+
+FG_MADE_INDEX = 7
+FG_ATTEMPT_INDEX = 8
+
+fg_made = data[:, FG_MADE_INDEX]
+fg_attempts = data[:, FG_ATTEMPT_INDEX]
+
+fg_accuracy = np.where(fg_attempts > 0, fg_made / fg_attempts, 0)
+
+print("Average field goal accuracy:", np.mean(fg_accuracy))
+
 points_per_minute = np.where(minutes > 0, points / minutes, 0)
 
 print("Average points per minute:", np.mean(points_per_minute))
+
